@@ -15,16 +15,16 @@
 **Started:** 2026-02-21 09:58 GMT  
 **Executed by:** AI Assistant
 
-### ✅ Completed Steps
+### ✅ Completed Steps 
 
 #### Step 1: Pre-Migration Assessment ✅
-- **Node version:** v22.14.0 ✅ (exceeds v22.12.0 minimum)
+- **Node version:** v22.14.0 ✅ (exceeds v22.12.0 minimum — OpenClaw is a Node.js application; Node is required regardless of install method, including the PowerShell installer)
 - **Clawdbot version:** 2026.1.24-3 (installed via npm global)
 - **State directory:** `~user\.clawdbot` ✅
 - **Workspace:** `~user\clawd` ✅
 - **WhatsApp:** Connected and paired ✅
 
-#### Step 2: Comprehensive Backup ✅
+#### Step 2: Comprehensive Backup ✅ (prompt CLAWDBOT to create backup)
 - **Backup location:** `~user\clawdbot-migration-backup-YYYYMMDD-HHMMSS`
 - **Backup size:** ~871 MB (11,707 files)
 - **State directory:** ✅ Backed up (`.clawdbot/` → `backup/.clawdbot/`)
@@ -290,7 +290,7 @@ Open WhatsApp and send yourself a message. Verify your AI assistant responds cor
 
 **Critical facts:**
 - OpenClaw IS Clawdbot (rebranded/evolved)
-- Requires **Node ≥22.12.0** (check: `node --version`)
+- Requires **Node ≥22.12.0** (check: `node --version`) — OpenClaw is a Node.js app; this applies even if you install via the PowerShell script
 - Migration preserves: config, auth, sessions, channel logins, workspace files
 - **BACKUP FIRST** — state dir contains secrets (API keys, WhatsApp creds, OAuth tokens)
 

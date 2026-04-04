@@ -87,11 +87,11 @@ Format: `agent:scope:session-id`
 - `agent:main:whatsapp-group-456` - WhatsApp group
 
 ### Model Failover
-1. Primary model (Claude Sonnet 4.5)
+1. Primary model (MiniMax-M2 or Claude Sonnet 4.5)
 2. Auth error → Next profile
 3. Rate limit → Cooldown + next
 4. Context overflow → Compact + retry
-5. All fail → Fallback model (Opus → Gemini)
+5. All fail → Fallback model (MiniMax → GLM → Qwen → etc)
 
 ### Delivery Context
 Routes replies to correct channel/user:
@@ -135,6 +135,7 @@ Routes replies to correct channel/user:
 - Telegram: `node-telegram-bot-api`
 
 **AI/ML:**
+- Ollama/MiniMax: `@ollama/ollama` (local/cloud models)
 - Anthropic: `@anthropic-ai/sdk`
 - Google: `@google/generative-ai`
 - OpenAI: `openai`
@@ -194,17 +195,18 @@ Each architecture document includes:
 - Skills system internals
 - Memory search implementation
 - Model catalog structure
+- Ollama provider integration
 - Molt integration details
 - Control UI architecture
 - Mobile app structure
 
 ## 📝 Notes
 
-- Documentation extracted from OpenClaw v2026.1.24
+- Documentation extracted from OpenClaw v2026.4.2
 - Based on source at ` \openclaw`
 - Focus on practical architecture patterns
 - Includes source code line references
-- Updated: 2026-01-31
+- Updated: 2026-04-05
 
 ---
 

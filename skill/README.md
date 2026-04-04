@@ -7,7 +7,7 @@ This directory contains distilled, token-efficient learning notes from ` \opencl
 
 ---
 
-## 📚 Current Coverage: 44 Skills
+## 📚 Current Coverage: ~44 Skills
 
 ### 🔧 Developer Tools (4)
 1. [GitHub Automation](01-github-skill.md) - `gh` CLI for issues, PRs, CI
@@ -132,5 +132,5 @@ These files are **living documents**:
 
 ---
 
-*Generated from ` \openclaw\skills\` by Helpful Bob*  
-*Last updated: 2026-01-31*
+*Generated from ` \openclaw\skills\` by Helpful Bob*
+*Last updated: 2026-04-05*

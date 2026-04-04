@@ -170,6 +170,26 @@ Then in config (no explicit models needed):
 
 ---
 
+## My Real-World Test Results
+
+I've been running MiniMax-M2 for a while now. Here's what it's handled:
+
+✅ **Daily cron jobs** — Flight price monitoring, WhatsApp messages, kanban health checks — all running reliably
+
+✅ **Codebase analysis** — Used Repomix to analyze new GitHub repos, understand architecture, summarize code
+
+✅ **Complex automation** — Built multi-step browser automation scripts (Playwright + LLM)
+
+**Verdict:** It's not quite Claude-level for deep reasoning, but for 90% of automation tasks? It's indistinguishable. And more importantly — **it's always available.**
+
+## The Bigger Picture
+
+This is what self-hosted AI should be about: **owning your infrastructure.** When you rely on a single API provider, you're one policy change away from disaster. MiniMax-M2 via Ollama gives you a reliable, always-available backbone that doesn't require API keys, doesn't hit rate limits, and won't suddenly cut you off.
+
+The future of AI automation isn't about chasing the latest GPT — it's about sustainable, independent backbones. MiniMax-M2 might just be yours.
+
+---
+
 **Links:**
 - MiniMax-M2: https://ollama.com/library/minimax-m2
 - Ollama: https://ollama.com

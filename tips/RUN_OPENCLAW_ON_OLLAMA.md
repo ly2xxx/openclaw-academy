@@ -36,18 +36,18 @@ Sign in at https://ollama.com/signin
 openclaw onboard
 ```
 
-Select **Ollama** → **Cloud + Local** → pick `minimax-m2.5:cloud`
+Select **Ollama** → **Cloud + Local** → pick `minimax-m2:cloud`
 
 Or non-interactive:
 
 ```bash
 openclaw onboard --non-interactive \
   --auth-choice ollama \
-  --custom-model-id "minimax-m2.5:cloud" \
+  --custom-model-id "minimax-m2:cloud" \
   --accept-risk
 ```
 
-### 4. The Manual Way
+### 4. The Manual Way (recommended)
 
 If you prefer manual config, here's the updated setup:
 

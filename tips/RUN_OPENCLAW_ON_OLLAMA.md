@@ -180,7 +180,7 @@ I've been running MiniMax-M2 for a while now. Here's what it's handled:
 
 ✅ **Complex automation** — Built multi-step browser automation scripts (Playwright + LLM)
 
-**Verdict:** It's not quite Claude-level for deep reasoning, but for 90% of automation tasks? It's indistinguishable. And more importantly — **it's always available.**
+**Verdict:** It's not quite Claude-level for deep reasoning, but for 90% of automation tasks? It's indistinguishable. And more importantly — **it's always available(if your computer is powerful enough to host the model locally).**
 
 ## The Bigger Picture
 

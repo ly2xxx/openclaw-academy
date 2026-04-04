@@ -56,17 +56,44 @@ If you prefer manual config, here's the updated setup:
   models: {
     providers: {
       ollama: {
-        // ⚠️ Use NATIVE API, NOT /v1 (tool calling breaks with /v1)
-        baseUrl: "http://127.0.0.1:11434",
-        apiKey: "ollama-local",
+        baseUrl: "http://127.0.0.1:11434/v1",
+        apiKey: "ollama-local", // can be anything doesn't matter   
         api: "ollama",
         models: [
           {
-            id: "minimax-m2.5:cloud",
-            name: "MiniMax M2.5 Cloud",
+            id: "minimax-m2:cloud",
+            name: "MiniMax M2 Cloud",
             reasoning: true,
             input: ["text"],
             cost: { input: 0, output: 0, cacheRead: 0, cacheWrite: 0 }
+          },
+          {
+            "id": "qwen3-coder:480b-cloud",
+            "name": "qwen3-coder:480b-cloud",
+            "reasoning": true,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            }
+          },
+          {
+            "id": "gpt-oss:120b-cloud",
+            "name": "gpt-oss:120b-cloud",
+            "reasoning": true,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            }
           }
         ]
       }
@@ -75,19 +102,16 @@ If you prefer manual config, here's the updated setup:
   agents: {
     defaults: {
       model: {
-        primary: "ollama/minimax-m2.5:cloud",
+        primary: "ollama/minimax-m2:cloud",
         fallbacks: [
           "ollama/qwen3-coder:480b-cloud",
-          "ollama/gpt-oss:120b-cloud",
-          "ollama/glm-4.6:cloud"
+          "ollama/gpt-oss:120b-cloud"
         ]
       }
     }
   }
 }
 ```
-
-**⚠️ Critical:** Use `baseUrl: "http://127.0.0.1:11434"` — NOT `http://127.0.0.1:11434/v1`. The `/v1` path uses OpenAI-compatible mode where tool calling is unreliable.
 
 ### 5. Restart OpenClaw
 
@@ -101,7 +125,7 @@ openclaw gateway restart
 openclaw models list
 ```
 
-You should see `minimax-m2.5:cloud` in the list.
+You should see `minimax-m2:cloud` in the list.
 
 ## Auto-Discovery (Even Simpler!)
 
@@ -147,7 +171,7 @@ Then in config (no explicit models needed):
 ---
 
 **Links:**
-- MiniMax-M2.5: https://ollama.com/library/minimax-m2
+- MiniMax-M2: https://ollama.com/library/minimax-m2
 - Ollama: https://ollama.com
 - Ollama Pricing: https://ollama.com/pricing
 - OpenClaw Docs: https://docs.openclaw.ai
